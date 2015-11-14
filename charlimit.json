@@ -1,5 +1,5 @@
 {
-	"name": "jQuery Limit character",
+	"name": "charlimit",
 	"title": "jQuery Limit character",
 	"description": "A char limit plugin ",
 	"version": "0.0.1-pre",
@@ -10,5 +10,7 @@
 	},
 	"main": "charlimit.js",
 	
-	"keywords": []
+	"keywords": [],
+        "licenses":["MIT"],
+        "dependencies":{}
 }

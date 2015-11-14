@@ -1,0 +1,14 @@
+{
+	"name": "jQuery Limit character",
+	"title": "jQuery Limit character",
+	"description": "A char limit plugin ",
+	"version": "0.0.1-pre",
+	"homepage": "http://noiov.com",
+	"author": {
+		"name": "Mria Zaman",
+		"url": "https://github.com/rothy1248"
+	},
+	"main": "charlimit.js",
+	
+	"keywords": []
+}

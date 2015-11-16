@@ -8,7 +8,7 @@ $.fn.charlimit = function(config){
 
     if(config !== undefined){
         var options = $.extend(
-            {'limit':10,'class':'dprzlimit','color': 0,'disable':0,'statusshow':1,'statusclass':'status','type':'div' ,'position':'after','text':'char left'},config
+            {'limit':10,'this_class':'mzrlimit','color': 0,'disable':0,'statusshow':1,'statusclass':'status','type':'div' ,'position':'after','text':'char left'},config
         )
     }
 
@@ -40,7 +40,7 @@ $.fn.charlimit = function(config){
                     $(this).attr('disabled' ,'disabled');
                 }
                 if(options.color == 1){
-                    $(this).css('background' ,'#f00');
+                    $(this).css('background' ,'#dd00');
                 }
                 var currentva = $(this).val();
                 var value = currentva.substring(0, options.limit);
@@ -48,7 +48,7 @@ $.fn.charlimit = function(config){
             }
 
         }
-        $(this).addClass(options.class);
+        $(this).addClass(options.this_class);
         $(this).on('input',function(){
 
             var current = $(this).val().length;
@@ -62,6 +62,7 @@ $.fn.charlimit = function(config){
                 else if(options.position == 'before'){
                     $(this).prev('.'+options.statusclass).text(left+' '+options.text);
                 }
+                
             }
             else{
                     var value = currentva.substring(0, options.limit);
@@ -77,7 +78,7 @@ $.fn.charlimit = function(config){
                     $(this).attr('disabled' ,'disabled');
                 }
                 if(options.color == 1){
-                    $(this).css('background' ,'#f00');
+                    $(this).css('background' ,'#dd00');
                 }
 
             }

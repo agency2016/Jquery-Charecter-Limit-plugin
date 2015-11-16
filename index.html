@@ -9,45 +9,154 @@
         $( document ).ready(function($) {
 
             $('.charlimit').charlimit({});
+            $('.charlimit2').charlimit({
+                'limit':15,
+                'this_class':'democlass',
+                'color':1,
+                'disable':1,
+                'position':'before'
+            });
+             $('.charlimit3').charlimit({
+                'type':'span',
+                'text' :'letter remaining..'
+
+            });
 
         });
     </script>
     <style>
+        @import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css";
+@import "http://fonts.googleapis.com/css?family=Roboto:400,500";
+
+.box > .icon { text-align: center; position: relative; }
+.box > .icon  p ,.box > .icon  ul{text-align: left;}
+.box > .icon  ul li {
+    background: white;
+    padding: 4px;
+    margin: 5px;
+}
+.box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: #63B76C; vertical-align: middle; }
+
+.box > .icon > .image > i { font-size: 36px !important; color: #fff !important; }
+
+.box > .icon > .info { margin-top: -24px; background: rgba(0, 0, 0, 0.04); border: 1px solid #e0e0e0; padding: 15px 0 10px 0; }
+
+.box > .icon > .info > h3.title { font-family: "Roboto",sans-serif !important; font-size: 16px; color: #222; font-weight: 500; }
+.box > .icon > .info > p {line-height: 1.5em; margin: 20px;}
+
+.box .space { height: 30px; }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-4 col-xs-12">
-            <h1>Demo Page for charlimit plugin</h1>
-        </div>
+<div class="jumbotron">
+      <div class="container">
+        <h1>CharLimit Jquery plugin demo page</h1>
+        <p>This is a demo page for charlimit jquery plugin.You can restrict the number of character input in 
+            any textarea or input box.This plugin checks not only input by keyboard but
+            also pasting any text by mouse it shows remaining char counting (optional) .There are more settings</p>
+        <p><a class="btn btn-primary btn-lg" href="https://github.com/rothy1248/charlimit" role="button">View on Github</a></p>
+      </div>
     </div>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 col-xs-12">
-            <div class="ex-slider" style="height: 440px;">
-            <input type="text" class="charlimit">
-             <textarea class="charlimit">hel</textarea>
+                <h3>Options</h3>
+                    <ul class="list list-unstyled" style="background:#e4e4e4;font-size: 16px;font-weight: bold;padding:10px;">
+                        <li> limit : 10 (number of input character),</li>
+                       <li>'this_class':'mzrlimit' (class added in the input box or textarea )</li>
+                       <li>'color': 0, (add red color to input box when count 0 , value 0/1)</li>
+                       <li>'disable':0, (make disable when input limit achieved  value : 0/1)</li>
+                       <li>'statusshow':1, (show hide remaining char count , value :0/1)</li>
+                       <li>'statusclass':'status',(class of status text)</li>
+                       <li>'type':'div' ,(example : div , span . status will be shown in this element )</li>
+                       <li>'position':'after',(value : before/after)</li>
+                       <li>'text':'char left' ( text after remaining char count  . example : 10 char left / 4 letter more ..)</li>
 
 
+                    </ul>
+
+                                           
             </div>
         </div>
     </div>
-</div>
 <div class="container">
-    <div class="row">
-        <div class="col-md-12 col-xs-12">
-            <div class="ex-slider" style="height: 440px;">
+	<div class="row">
+        <!-- Boxes de Acoes -->
+    	<div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">
+				<div class="icon">
+					<div class="image"><i class="fa fa-thumbs-o-up"></i></div>
+					<div class="info">
+						<h3 class="title">With Default Options</h3>
+						<textarea class="charlimit">Text..</textarea>
 
+                                                <div style="text-align:left;background-color: white;padding: 5px;">
+                                                    <code>
+                                                         $('.charlimit').charlimit();
 
-            </div>
+                                                    </code>
+						</div>
+						
+                                        </div>
+				</div>
+				<div class="space"></div>
+			</div>
+		</div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">
+				<div class="icon">
+					<div class="image"><i class="fa fa-flag"></i></div>
+					<div class="info">
+						<h3 class="title">Customize Options Example 1</h3>
+                                                <p>
+                                                    <input type="text" name="xyz" class="charlimit2"/>
+						</p>
+						<div style="text-align:left;background-color: white;padding: 5px;">
+                                                    <code>
+                                                         $('.charlimit2').charlimit({
+                                                            'limit':15,
+                                                            'this_class':'democlass',
+                                                            'color':1,
+                                                            'disable':1,
+                                                            'position':'before'
+                                                        });
+
+                                                    </code>
+						</div>
+					</div>
+				</div>
+				<div class="space"></div>
+			</div>
+		</div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">
+				<div class="icon">
+					<div class="image"><i class="fa fa-desktop"></i></div>
+					<div class="info">
+						<h3 class="title">Customize Options Example 2</h3>
+                                                <p>
+                                                    <input type="text" name="xyzabc" class="charlimit3"/>
+						</p>
+						<div style="text-align:left;background-color: white;padding: 5px;">
+                                                    <code>
+                                                        $('.charlimit3').charlimit({
+                                                                'type':'span',
+                                                                'text' :'letter remaining..'
+
+                                                            });
+                                                    </code>
+						</div>
+                                        </div>
+				</div>
+				<div class="space"></div>
+			</div>
+		</div>
+		<!-- /Boxes de Acoes -->
         </div>
-    </div>
 </div>
-
 
 </body>
 </html>

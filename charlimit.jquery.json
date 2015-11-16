@@ -11,6 +11,8 @@
 	"main": "charlimit.js",
 	
 	"keywords": [],
-        "licenses":["MIT"],
-        "dependencies":{}
+        "licenses": [ { "type": "GPLv2", "url": "https://raw.github.com/hakanersu/jquery-bildirim/master/LICENSE" } ],
+        "dependencies": {
+		"jquery": ">=1.7"
+	}
 }

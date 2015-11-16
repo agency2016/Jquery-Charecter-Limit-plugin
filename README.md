@@ -18,6 +18,7 @@ This is a demo page for charlimit jquery plugin.You can restrict the number of c
 
 ##Examples
   $('.charlimit2').charlimit()
+
   $('.charlimit2').charlimit({
         'limit':15,
         'this_class':'democlass',
